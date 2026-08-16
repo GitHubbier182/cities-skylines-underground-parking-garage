@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Underground Parking Garage</name>
+  <author>ScratchyBald</author>
+  <version>2.4.1</version>
+  <assembly>UndergroundParkingGarage.dll</assembly>
+  <description>Standalone and building-attached underground parking. Requires Harmony 2040656402; attached entrances also require parking sign 513055494.</description>
+  <url></url>
+  <tags>Transport;Parking;Traffic;Roads</tags>
+  <enabled>true</enabled>
+  <supportedVersions>
+    <version>1.0</version>
+  </supportedVersions>
+</ModMetaData>

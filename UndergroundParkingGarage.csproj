@@ -1,0 +1,98 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D456E83-3100-4C41-8EB2-1AC5F3DCE0FD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UndergroundParkingGarage</RootNamespace>
+    <AssemblyName>UndergroundParkingGarage</AssemblyName>
+    <AssemblyVersion>2.4.1.0</AssemblyVersion>
+    <FileVersion>2.4.1.0</FileVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <LangVersion>7.3</LangVersion>
+    <RestoreProjectStyle>None</RestoreProjectStyle>
+    <RestorePackages>false</RestorePackages>
+    <EnableNuGetPackageRestore>false</EnableNuGetPackageRestore>
+    <ResolveNuGetPackages>false</ResolveNuGetPackages>
+    <RestoreTargets> </RestoreTargets>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(HOME)/Library/Application Support/Steam/steamapps/common/Cities_Skylines/Cities.app/Contents/Resources/Data/Managed/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ColossalManaged">
+      <HintPath>$(HOME)/Library/Application Support/Steam/steamapps/common/Cities_Skylines/Cities.app/Contents/Resources/Data/Managed/ColossalManaged.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ICities">
+      <HintPath>$(HOME)/Library/Application Support/Steam/steamapps/common/Cities_Skylines/Cities.app/Contents/Resources/Data/Managed/ICities.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(HOME)/Library/Application Support/Steam/steamapps/common/Cities_Skylines/Cities.app/Contents/Resources/Data/Managed/UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(HOME)/Library/Application Support/Steam/steamapps/common/Cities_Skylines/Cities.app/Contents/Resources/Data/Managed/UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="CitiesHarmony.Harmony">
+      <HintPath>$(HOME)/Library/Application Support/Steam/steamapps/workshop/content/255710/2040656402/CitiesHarmony.Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="UndergroundParkingGarage.cs" />
+    <Compile Include="Building/UndergroundParkingBuildingAI.cs" />
+    <Compile Include="Building/UndergroundParkingBuildingPlacement.cs" />
+    <Compile Include="Building/UndergroundParkingBuildingPrefab.cs" />
+    <Compile Include="Core/UndergroundParkingLocalization.cs" />
+    <Compile Include="Core/UndergroundParkingLog.cs" />
+    <Compile Include="Core/UndergroundParkingBoundedBinaryString.cs" />
+    <Compile Include="Data/UndergroundParkingFacility.cs" />
+    <Compile Include="Data/UndergroundParkingStandaloneVariant.cs" />
+    <Compile Include="Data/UndergroundParkingGeometry.cs" />
+    <Compile Include="Data/UndergroundParkingLaneLayout.cs" />
+    <Compile Include="Data/UndergroundParkingRegistry.cs" />
+    <Compile Include="Simulation/UndergroundParkingConnectorCleanup.cs" />
+    <Compile Include="Simulation/UndergroundParkingAccessManager.cs" />
+    <Compile Include="Simulation/UndergroundParkingEntranceAnchorService.cs" />
+    <Compile Include="Simulation/UndergroundParkingBuildingMonitor.cs" />
+    <Compile Include="Simulation/UndergroundParkingBulldozeMonitor.cs" />
+    <Compile Include="Simulation/UndergroundParkingSolidVolumeHarmony.cs" />
+    <Compile Include="Simulation/UndergroundParkingOccupancyHarmony.cs" />
+    <Compile Include="Simulation/UndergroundParkingScanCoordinator.cs" />
+    <Compile Include="Simulation/TmpeParkingCompatibilityManager.cs" />
+    <Compile Include="Simulation/UndergroundParkingEntryRouteManager.cs" />
+    <Compile Include="Simulation/UndergroundParkingOccupancyManager.cs" />
+    <Compile Include="Simulation/UndergroundParkingFloorManager.cs" />
+    <Compile Include="Simulation/UndergroundParkingHostManager.cs" />
+    <Compile Include="Tools/UndergroundParkingPlacementTool.cs" />
+    <Compile Include="UI/UndergroundParkingPanel.cs" />
+    <Compile Include="UI/UndergroundParkingInfoTooltip.cs" />
+    <Compile Include="UI/UndergroundParkingFloorPanel.cs" />
+    <Compile Include="UI/UndergroundParkingPublicTransportTab.cs" />
+    <Compile Include="UI/UIHelpers.cs" />
+    <Compile Include="Visuals/UndergroundParkingVisualManager.cs" />
+    <Compile Include="Visuals/UndergroundParkingMarkGeometry.cs" />
+    <Compile Include="Visuals/UndergroundParkingPlacementPreview.cs" />
+    <Compile Include="Visuals/UndergroundParkingPortalAnimationManager.cs" />
+    <Compile Include="Shared\OneTimeUpdateNoticePanel.cs" />
+    <Compile Include="Shared\ScratchysScanManager.cs" />
+    <Compile Include="Shared\PublicBuildIdentity.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+</Project>
